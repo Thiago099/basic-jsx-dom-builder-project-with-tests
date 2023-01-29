@@ -1,9 +1,12 @@
 import { assert, describe, expect, test } from 'vitest'
 
-import {app} from "./index.jsx"
+import counter from "./counter.jsx"
 
 
 describe('suite name', () => {
+
+  const app = counter()
+
   const counterNumber = app.$find("#counter")[0]
 
   const incrementButton = app.$find("#increment-button")[0]
