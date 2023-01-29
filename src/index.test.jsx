@@ -4,17 +4,19 @@ import {app} from "./index.jsx"
 
 
 describe('suite name', () => {
-  const counter = app.$find("#counter")[0].textContent
+  const counterNumber = app.$find("#counter")[0]
 
+  const incrementButton = app.$find("#increment-button")[0]
+  
   it('setup', () => {
-    assert.equal(counter, "1")
+    assert.equal(counterNumber.textContent, "1")
   })
-
+  
   it('increment', () => {
-    app.$find("#increment-button")[0]
-    .$click()
+    
+    incrementButton.$click()
     .$then(()=>{
-      assert.equal(counter, "2")
+      assert.equal(counterNumber.textContent, "2")
     })
   })
 })
