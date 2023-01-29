@@ -1,15 +1,19 @@
 
 import './style.css'
 
+const data = state({ count: 0 })
 
+function increment() {
+    data.count++
+}
+increment()
 export const app =
 <div>
-    <div id="test">
-        <div>
-
-        123
-        </div>
+    <div id="counter">
+        {data.count}
     </div>
+    <button id="increment-button" on:click={increment}>Click me</button>
 </div>
+
 
 app.$parent(document.body)

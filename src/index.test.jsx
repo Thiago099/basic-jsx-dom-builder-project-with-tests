@@ -4,8 +4,17 @@ import {app} from "./index.jsx"
 
 
 describe('suite name', () => {
-  it('bar', () => {
-    assert.equal(Math.sqrt(4), 2)
+  const counter = app.$find("#counter")[0].textContent
+
+  it('setup', () => {
+    assert.equal(counter, "1")
   })
-  console.log(app.$find("#test")[0].__element.innerHTML)
+
+  it('increment', () => {
+    app.$find("#increment-button")[0]
+    .$click()
+    .$then(()=>{
+      assert.equal(counter, "2")
+    })
+  })
 })
