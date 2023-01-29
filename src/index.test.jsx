@@ -1,4 +1,4 @@
-import { assert, describe, expect, it } from 'vitest'
+import { assert, describe, expect, test } from 'vitest'
 
 import {app} from "./index.jsx"
 
@@ -8,15 +8,18 @@ describe('suite name', () => {
 
   const incrementButton = app.$find("#increment-button")[0]
   
-  it('setup', () => {
-    assert.equal(counterNumber.textContent, "1")
+  test('setup', () => {
+
+    expect(counterNumber.textContent).toBe("1")
+    
   })
   
-  it('increment', () => {
+  test('increment', () => {
     
     incrementButton.$click()
     .$then(()=>{
-      assert.equal(counterNumber.textContent, "2")
+      expect(counterNumber.textContent).toBe("2")
     })
+
   })
 })
