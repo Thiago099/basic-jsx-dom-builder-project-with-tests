@@ -6,7 +6,6 @@ const data = state({ count: 0 })
 function increment() {
     data.count++
 }
-increment()
 export const app =
 <div>
     <div id="counter">

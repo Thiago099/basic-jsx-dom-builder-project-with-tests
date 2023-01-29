@@ -10,16 +10,14 @@ describe('suite name', () => {
   
   test('setup', () => {
 
-    expect(counterNumber.textContent).toBe("1")
+    expect(counterNumber.textContent).toBe("0")
     
   })
   
   test('increment', () => {
     
     incrementButton.$click()
-    .$then(()=>{
-      expect(counterNumber.textContent).toBe("2")
-    })
+    expect(counterNumber.textContent).toBe("1")
 
   })
 })
