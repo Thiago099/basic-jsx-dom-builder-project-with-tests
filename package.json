@@ -12,7 +12,9 @@
   "devDependencies": {
     "jsdom": "^21.1.0",
     "vite": "^3.2.3",
-    "vitest": "^0.28.3",
-    "jsx-dom-builder": "3.0.11"
+    "vitest": "^0.28.3"
+  },
+  "dependencies": {
+    "jsx-dom-builder": "^4.0.10"
   }
 }
